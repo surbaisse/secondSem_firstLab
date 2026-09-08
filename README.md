@@ -2,3 +2,5 @@
 
 rectangle.cpp
 vowelsCounter.cpp
+triangle.cpp
+deleteMarks.cpp
