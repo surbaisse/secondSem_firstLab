@@ -14,6 +14,14 @@ int square(int length, int width){
 double diagonal_length(int length, int width){
 	return sqrt(length*length + width * width);
 }
+bool checkValue(int value){
+	if (value > 0 ){
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
 int main(){
 	cout << "Необходимо выбрать какой параметр прямоугольника вы хотети узнать: \n1)Периметр\n2)Площадь\n3)Длина диагонали\n";
 	int a = 0;
@@ -27,8 +35,16 @@ int main(){
 	}
 	cout << "Введите длинну вашего прямоугольника: ";
 	cin >> length;
+	if (checkValue(length) == 0){
+		cout << "Wrong value\n";
+		return 0;
+	}
 	cout << "Введите ширину вашего прямоугольника: ";
 	cin >> width;
+	if (checkValue(width) == 0){
+		cout << "Wrong value\n";
+		return 0;
+	}
 	// Switch с выбором действия
 	switch(a){
 		case 1:
